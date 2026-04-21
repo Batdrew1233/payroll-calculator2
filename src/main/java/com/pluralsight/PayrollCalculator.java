@@ -12,7 +12,16 @@ public class PayrollCalculator {
         String line;
 
         while((line = bufferedReader.readLine()) != null){
-            System.out.println(line);
+            String[] parts = line.split("\\|");
+
+            int id = Integer.parseInt(parts[0]);
+            String name = parts[1];
+            double hoursWorked = Double.parseDouble(parts[2]);
+            double payRate = Double.parseDouble(parts[3]);
+
+            Employee employee = new Employee(id, name, hoursWorked, payRate);
+
+            System.out.println(employee.getEmployeeId() + " " + employee.getName() + " " + employee.getGrossPay());
 
 
         }

@@ -4,10 +4,10 @@ public class Employee {
     private int employeeId;
     private String name;
     private double hoursWorked;
-    private float payRate;
+    private double payRate;
 
     //Constructor
-    public Employee(int employeeId, String name, double hoursWorked, float payRate) {
+    public Employee(int employeeId, String name, double hoursWorked, double payRate) {
         this.employeeId = employeeId;
         this.name = name;
         this.hoursWorked = hoursWorked;
@@ -39,11 +39,11 @@ public class Employee {
             this.hoursWorked = hoursWorked;
         }
 
-        public float getPayRate () {
+        public double getPayRate () {
             return payRate;
         }
 
-        public void setPayRate ( float payRate){
+        public void setPayRate ( double payRate){
             this.payRate = payRate;
         }
 
