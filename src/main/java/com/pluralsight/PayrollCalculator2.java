@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class PayrollCalculator {
+public class PayrollCalculator2 {
     public static void main(String[] args) throws IOException {
         FileReader fileReader = new FileReader("employees.csv");
         BufferedReader bufferedReader = new BufferedReader((fileReader));
