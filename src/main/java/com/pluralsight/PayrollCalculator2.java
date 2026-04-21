@@ -12,12 +12,16 @@ public class PayrollCalculator2 {
         String line;
 
         while((line = bufferedReader.readLine()) != null){
+            if (line.trim().isEmpty()){
+                continue;
+            }
+
             String[] parts = line.split("\\|");
 
-            int id = Integer.parseInt(parts[0]);
-            String name = parts[1];
-            double hoursWorked = Double.parseDouble(parts[2]);
-            double payRate = Double.parseDouble(parts[3]);
+            int id = Integer.parseInt(parts[0].trim());
+            String name = parts[1].trim();
+            double hoursWorked = Double.parseDouble(parts[2].trim());
+            double payRate = Double.parseDouble(parts[3].trim());
 
             Employee employee = new Employee(id, name, hoursWorked, payRate);
 
@@ -25,6 +29,7 @@ public class PayrollCalculator2 {
 
 
         }
+        bufferedReader.close();
 
 
     }
